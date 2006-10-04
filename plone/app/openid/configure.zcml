@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+   <browser:page
+      for="*"
+      class=".browser.OpenIdView"
+      name="openid"
+      permission="zope.Public"
+      allowed_interface=".interfaces.IOpenIdView"
+      />
+</configure>

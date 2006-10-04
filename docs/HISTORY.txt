@@ -1,0 +1,9 @@
+Changelog for plone.app.openid
+
+    (name of developer listed in brackets)
+
+plone.app.openid - 0.1 Unreleased
+
+    - Initial package structure.
+      [zopeskel]
+

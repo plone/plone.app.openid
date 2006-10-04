@@ -1,0 +1,13 @@
+README.txt
+setup.cfg
+setup.py
+plone/__init__.py
+plone.app.openid.egg-info/PKG-INFO
+plone.app.openid.egg-info/SOURCES.txt
+plone.app.openid.egg-info/dependency_links.txt
+plone.app.openid.egg-info/entry_points.txt
+plone.app.openid.egg-info/namespace_packages.txt
+plone.app.openid.egg-info/not-zip-safe
+plone.app.openid.egg-info/top_level.txt
+plone/app/__init__.py
+plone/app/openid/__init__.py
