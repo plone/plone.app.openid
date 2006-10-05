@@ -20,7 +20,7 @@ def hasOpenIdPlugin(portal):
 def createOpenIdPlugin(portal, out):
     print >>out, "Adding an OpenId plugin"
     acl=getToolByName(portal, "acl_users")
-    acl.manage_addProduct["OpenId"].addOpenIdPlugin(
+    acl.manage_addProduct["plone.openid"].addOpenIdPlugin(
             id="openid", title="OpenId authentication plugin")
 
 
