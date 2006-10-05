@@ -1,2 +1,2 @@
 
-GLOBALS	= globals()
+GLOBALS = globals()
