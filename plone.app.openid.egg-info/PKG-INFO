@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: plone.app.openid
-Version: 0.1dev
+Version: 0.1dev-r11057
 Summary: Plone OpenID authentication support
 Home-page: http://svn.plone.org/svn/plone/plone.example
 Author: Plone Foundation
