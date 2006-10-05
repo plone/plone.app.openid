@@ -2,7 +2,7 @@ from StringIO import StringIO
 from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.Extensions.utils import install_subskin
 from Products.PluggableAuthService.interfaces.plugins import IExtractionPlugin
-from Products.OpenId.interfaces import IOpenIdExtractionPlugin
+from plone.openid.interfaces import IOpenIdExtractionPlugin
 from plone.app.openid.config import GLOBALS
 
 def listOpenIdPlugins(portal):
