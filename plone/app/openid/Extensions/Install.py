@@ -3,7 +3,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.Extensions.utils import install_subskin
 from Products.PluggableAuthService.interfaces.plugins import IExtractionPlugin
 from Products.OpenId.interfaces import IOpenIdExtractionPlugin
-from Products.PloneOpenId.config import GLOBALS
+from plone.app.openid.config import GLOBALS
 
 def listOpenIdPlugins(portal):
     acl=getToolByName(portal, "acl_users")
