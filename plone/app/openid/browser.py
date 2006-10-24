@@ -1,7 +1,6 @@
-from zope.interface import implements
+from zope.interface import implements, implementedBy
 from Products import Five
 from Products.CMFCore.utils import getToolByName
-from Products.PluggableAuthService.utils import implementedBy
 from Products.PluggableAuthService.interfaces.plugins \
         import IExtractionPlugin, ILoginPasswordExtractionPlugin
 from plone.openid.interfaces import IOpenIdExtractionPlugin
