@@ -33,5 +33,3 @@ class OpenIdView(Five.BrowserView):
     def ShowStandardLogin(self):
         return self.normal
 
-
-
