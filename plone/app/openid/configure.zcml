@@ -5,6 +5,8 @@
 
    <five:registerPackage package="." />
 
+   <include package="plone.openid" />
+
    <browser:page
       for="*"
       class=".browser.OpenIdView"
