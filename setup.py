@@ -25,7 +25,8 @@ setup(name='plone.app.openid',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-        "plone.openid",
+        'plone.openid',
+        'setuptools',
       ],
       entry_points="""
       # -*- Entry points: -*-
