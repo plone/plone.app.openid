@@ -24,6 +24,7 @@ setup(name='plone.app.openid',
       namespace_packages=['plone'],
       include_package_data=True,
       zip_safe=False,
+      download_url='http://code.google.com/p/plone/downloads/list',
       install_requires=[
         'plone.openid',
         'setuptools',
