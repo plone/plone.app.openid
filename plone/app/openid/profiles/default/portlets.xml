@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <portlet 
+   addview="portlets.OpenIDLogin"
+   title="Login"
+   description="A portlet which can render an OpenID log-in box"
+   for="plone.app.portlets.interfaces.IColumn"
+   />
+
+</portlets>

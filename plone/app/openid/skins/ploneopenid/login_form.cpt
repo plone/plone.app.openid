@@ -28,10 +28,10 @@
                  ac_persist auth/persist_cookie|nothing;
                  identity_url python:request.get(ac_identity, '');
                  login_name python:request.get('login_name', request.get(ac_name, ''));
-                 openid context/@@openid">
+                 pas_info context/@@pas_info">
  
  
-      <tal:block condition="openid/ShowOpenIdLogin">
+      <tal:block condition="pas_info/hasOpenIDdExtractor">
         <h1 i18n:translate="heading_openid_sign_in">OpenID Login</h1>
 
         <div i18n:translate="openid_intro">
@@ -41,7 +41,7 @@
 
         <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
              method="post"
-             id="openid_login_form"
+             class="openidLoginForm"
              tal:condition="python:auth">
  
          <input type="hidden" name="form.submitted" value="1" />
@@ -69,9 +69,8 @@
  
              <input type="text"
                      size="15"
-                     class="openid_url"
+                     class="openidUrl"
                      name="__ac_identity_url"
-                     id="__ac_identity_url"
                      tal:attributes="value identity_url;
                                      name ac_identity;
                                      id ac_identity;"
@@ -94,7 +93,7 @@
        </form>
       </tal:block>
 
-      <tal:block condition="openid/ShowStandardLogin">
+      <tal:block condition="pas_info/hasLoginPasswordExtractor">
         <h1 i18n:translate="heading_sign_in">Please log in</h1>
 
         <p i18n:translate="description_sign_in">

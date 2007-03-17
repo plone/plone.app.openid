@@ -1,18 +1,15 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:five="http://namespaces.zope.org/five">
 
-   <five:registerPackage package="." />
+   <five:registerPackage package="." initialize=".initialize" />
+
+   <cmf:registerDirectory name="ploneopenid"/>
+
+   <include package=".portlets" />
 
    <include package="plone.openid" />
-
-   <browser:page
-      for="*"
-      class=".browser.OpenIdView"
-      name="openid"
-      permission="zope.Public"
-      allowed_interface=".interfaces.IOpenIdView"
-      />
 
 </configure>
