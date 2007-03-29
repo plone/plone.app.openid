@@ -8,7 +8,7 @@ def initialize(context):
         try:
             profile_registry.registerProfile(
                     name="default",
-                    title="OpenID authentication support",
+                    title="OpenID Authentication Support",
                     description="Adds support for authenticating with OpenID credentials in a Plone site",
                     path="profiles/default",
                     product="plone.app.openid",
