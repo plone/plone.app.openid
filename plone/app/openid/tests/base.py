@@ -11,5 +11,5 @@ class OpenIdTestCase(PloneTestCase.PloneTestCase):
         return self.pas.restrictedTraverse("@@openid")
 
 
-class OpenIdFunctionalTestCase(PloneTestCase.FunctionalTestCase):
+class OpenIdFunctionalTestCase(PloneTestCase.Functional, OpenIdTestCase):
     pass
