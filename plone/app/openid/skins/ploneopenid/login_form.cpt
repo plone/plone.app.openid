@@ -34,7 +34,8 @@
  
  
       <tal:block condition="pas_info/hasOpenIDdExtractor">
-        <h1 i18n:translate="heading_openid_sign_in">OpenID Login</h1>
+        <h1 class="documentFirstHeading"
+            i18n:translate="heading_openid_sign_in">OpenID Login</h1>
 
         <div i18n:translate="openid_intro">
           If you do not have an OpenID, you may get one from <a
@@ -96,7 +97,8 @@
       </tal:block>
 
       <tal:block condition="pas_info/hasLoginPasswordExtractor">
-        <h1 i18n:translate="heading_sign_in">Please log in</h1>
+        <h1  class="documentFirstHeading"
+             i18n:translate="heading_sign_in">Please log in</h1>
 
         <p i18n:translate="description_sign_in">
          To access this part of the site, you need to log in with your user name and password.
@@ -232,11 +234,8 @@
                      />
  
            </div>
- 
-           <p i18n:translate="remember_to_log_out">
-             Please log out or exit your browser when you're done.
-           </p>
- 
+
+
          </fieldset>
  
         </form>
