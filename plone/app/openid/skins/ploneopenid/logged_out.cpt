@@ -34,7 +34,8 @@
 
 
   <tal:block condition="pas_info/hasOpenIDdExtractor">
-    <h1 i18n:translate="heading_openid_sign_in">OpenID Login</h1>
+    <h1 class="documentFirstHeading"
+        i18n:translate="heading_openid_sign_in">OpenID Login</h1>
 
     <div i18n:translate="openid_intro">
       If you do not have an OpenID, you may get one from <a
