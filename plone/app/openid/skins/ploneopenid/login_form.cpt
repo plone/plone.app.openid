@@ -72,6 +72,7 @@
  
              <input type="text"
                      size="15"
+                     tabindex="1"
                      class="openidUrl"
                      name="__ac_identity_url"
                      tal:attributes="value identity_url;
@@ -83,6 +84,7 @@
            <div class="formControls">
              <input class="context"
                      type="submit"
+                     tabindex="2"
                      name="openid_submit"
                      value="Log in"
                      i18n:attributes="value label_openid_log_in;"
@@ -174,6 +176,7 @@
  
              <input type="text"
                      size="15"
+                     tabindex="1"
                      tal:attributes="name ac_name;
                      id ac_name;
                      value login_name"
@@ -198,6 +201,7 @@
  
              <input type="password"
                      size="15"
+                     tabindex="2"
                      tal:attributes="name ac_password;
                      id ac_password;"
                      />
@@ -208,6 +212,7 @@
              <input type="checkbox"
                      class="noborder formRememberName"
                      value="1"
+                     tabindex="3"
                      checked="checked"
                      id="cb_remember"
                      tal:attributes="name ac_persist;
@@ -229,6 +234,7 @@
                      type="submit"
                      name="submit"
                      value="Log in"
+                     tabindex="4"
                      i18n:attributes="value label_log_in;"
                      tal:attributes="onclick string:javascript:return setLoginVars('$ac_name','login_name','$ac_password','pwd_empty','js_enabled','cookies_enabled');"
                      />
