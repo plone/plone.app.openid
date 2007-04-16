@@ -1,24 +1,27 @@
-Plone OpenID authentication
+This package integrates the OpenID authentication support from the
+'plone.openid' package into a Plone site.
 
-  This package integrates the OpenID authentication support from the
-  *plone.openid* package into a Plone site.
+Requirements
 
-  Requirements
+    Plone's OpenID Authentication Support has a few requirements to be able to function:
 
-    *plone.app.openid* has a few requirements to be able to function:
+    1. The 'plone.openid' package must be installed in your Zope instance.
+       (Plone 3.0 and later include this package by default)
 
-    * the *plone.openid* package must be installed in your Zope instance.
-      Plone 3.0 and later include this package by default.
+    2. The 'python-openid' python package must be installed in your python
+       path. This package can be downloaded from the 
+       "Python Cheese Shop":http://cheeseshop.python.org package directory,
+       or installed using the easy_install command::
 
-    * the *openid* python package must be installed in your python
-      path. This package can be downloaded from the cheeseshop or
-      installed via the easy_install command.
+        easy_install python-openid
 
-    * the *urljr* python package must be installed in your python
-      path. This package can be downloaded from the cheeseshop or
-      installed via the easy_install command.
+    3. The 'python-urljr' python package must be installed in your python
+       path. This package can be downloaded from same aforementioned site or
+       installed via the easy_install command::
 
-  Features
+        easy_install python-urljr
+
+Features
 
     This product makes three modifications to a Plone site:
 
