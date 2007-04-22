@@ -12,7 +12,7 @@
 from Products.CMFPlone import PloneMessageFactory as _
 
 if not openid_url:
-    context.plone_utils.addPortalMessage(_(u'Please enter your identity URL.'), 'openid_url_required')
+    context.plone_utils.addPortalMessage(_(u'Please enter your identity URL.'), 'warning')
     state.setError('openid_url', 
         _(u'Please enter your identity URL.'), 'openid_url_required')
 
