@@ -42,7 +42,7 @@
                 OpenID login
             </dt>
 
-            <dd class="fieldset-openid-login">
+            <dd id="fieldset-openid-login">
                 <div i18n:translate="openid_intro">
                   If you do not have an OpenID, you may get one from 
                   <a href="http://www.myopenid.com/"
@@ -107,7 +107,7 @@
             Site login
             </dt>
 
-            <dd class="fieldset-site-login">
+            <dd id="fieldset-site-login">
                 <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
                      method="post"
                      id="login_form"
