@@ -36,6 +36,7 @@
 <h1 class="documentFirstHeading"
     i18n:translate="heading_sign_in">Please log in</h1>
 
+<metal:login define-macro="login">
     <dl class="enableFormTabbing">
 
         <tal:openid condition="pas_info/hasOpenIDdExtractor">
@@ -239,6 +240,8 @@
             </dd>
         </tal:sitelogin>
     </dl>
+</metal:login>
+
 </div>
 </body>
 </html>
