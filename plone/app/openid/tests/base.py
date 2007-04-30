@@ -7,8 +7,8 @@ class OpenIdTestCase(PloneTestCase.PloneTestCase):
         return self.portal.acl_users
 
     @property
-    def view(self):
-        return self.pas.restrictedTraverse("@@openid")
+    def pas_info(self):
+        return self.pas.restrictedTraverse("@@pas_info")
 
 
 class OpenIdFunctionalTestCase(PloneTestCase.Functional, OpenIdTestCase):
