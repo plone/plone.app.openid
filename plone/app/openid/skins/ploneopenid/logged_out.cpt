@@ -8,6 +8,14 @@
       <head>
           <script type="text/javascript" metal:fill-slot="javascript_head_slot">
           </script>
+    <metal:css fill-slot="css_slot">
+      <style type="text/css" media="all">
+        input.openidUrl {
+          background-image : url(openid-icon.gif);
+          background-repeat: no-repeat;
+        }
+      </style>
+    </metal:css>
           <metal:block fill-slot="top_slot"
                        tal:define="dummy python:request.set('disable_border',1)" />
           <metal:block fill-slot="column_one_slot" />
