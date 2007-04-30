@@ -27,9 +27,11 @@
           <br/>
 
           <input type="text"
-                  size="10"
-                  class="openidUrl"
+                  size="13"
                   name="__ac_identity_url"
+                  style="background-image : url(openid-icon.gif);
+                         background-repeat: no-repeat;
+                         padding-left: 16px;"
                   tal:attributes="name ac_identity;
                                   id ac_identity;"/>
          </div>
