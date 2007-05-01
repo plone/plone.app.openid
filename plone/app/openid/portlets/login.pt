@@ -29,11 +29,11 @@
           <input type="text"
                   size="13"
                   name="__ac_identity_url"
-                  style="background-image : url(openid-icon.gif);
-                         background-repeat: no-repeat;
-                         padding-left: 16px;"
+                  style=""
                   tal:attributes="name ac_identity;
-                                  id ac_identity;"/>
+                                  id ac_identity;
+                                  style string:background: url(${here/portal_url}/openid-icon.gif) no-repeat;; padding-left: 16px;"
+           />
          </div>
 
          <div class="formControls">
