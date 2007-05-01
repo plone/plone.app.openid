@@ -11,9 +11,8 @@
     <metal:css fill-slot="css_slot">
       <style type="text/css" media="all">
         input.openidUrl {
-          background-image : url(openid-icon.gif);
-          background-repeat: no-repeat;
-          padding-left: 16px;
+          background: White url(openid-icon.gif) 2px 3px no-repeat;
+          padding-left: 18px;
         }
       </style>
     </metal:css>
