@@ -7,9 +7,8 @@
     <metal:css fill-slot="css_slot">
       <style type="text/css" media="all">
         input.openidUrl {
-          background-image : url(openid-icon.gif);
-          background-repeat: no-repeat;
-          padding-left: 16px;
+          background: White url(openid-icon.gif) 2px 3px no-repeat;
+          padding-left: 18px;
         }
       </style>
     </metal:css>
@@ -33,10 +32,9 @@
                  login_name python:request.get('login_name', request.get(ac_name, ''));
                  pas_info context/@@pas_info">
  
-<h1 class="documentFirstHeading"
-    i18n:translate="heading_sign_in">Please log in</h1>
 
 <metal:login define-macro="login">
+<div id="login-form">
     <dl class="enableFormTabbing">
 
         <tal:openid condition="pas_info/hasOpenIDdExtractor">
@@ -45,12 +43,6 @@
             </dt>
 
             <dd id="fieldset-openid-login">
-                <div i18n:translate="openid_intro">
-                  If you do not have an OpenID, you may get one from 
-                  <a href="http://www.myopenid.com/"
-                     target="_blank"
-                     i18n:name="openid_myopenid">MyOpenID.com</a>.
-                </div>
 
                 <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
                       class="enableAutoFocus"
@@ -73,13 +65,13 @@
 
                      <div i18n:translate="help_openid_identity_url"
                        class="formHelp">
-                       Please type your identity URL below to login.
+                       Please type your OpenID URL below to log in.
                      </div>
 
                      <div tal:content="error">Validation error output</div>
 
                      <input type="text"
-                             size="15"
+                             size="25"
                              class="openidUrl"
                              name="__ac_identity_url"
                              tal:attributes="value identity_url;
@@ -89,17 +81,25 @@
                    </div>
 
                    <div class="formControls">
-                     <input class="context"
-                             type="submit"
-                             name="openid_submit"
-                             value="Log in"
-                             i18n:attributes="value label_openid_log_in;"
-                             />
+                       <input class="context"
+                              type="submit"
+                              name="openid_submit"
+                              value="Log in"
+                              i18n:attributes="value label_openid_log_in;"
+                              />
+                       <a href="http://openid.net" class="discreet link-plain"
+                          i18n:translate="info_openid">What is OpenID?</a>
+                  </div>
 
-                   </div>
+                   <p class="discreet"
+                       i18n:translate="openid_intro">
+                      If you do not have an OpenID, you may get one from 
+                      <a href="http://www.myopenid.com/"
+                         class="link-plain"
+                         target="_blank"
+                         i18n:name="openid_myopenid">MyOpenID.com</a>.
+                   </p>
 
-                   <a href="http://openid.net"
-                     i18n:translate="info_openid">What is OpenID?</a>
                </form>
            </dd>
        </tal:openid>
@@ -132,14 +132,18 @@
  
                 </p>
  
-                <p tal:condition="python:checkPermission('Mail forgotten password', here)"
-                  i18n:translate="help_password_retrieval">
-                 If you have forgotten your password,
-                 <span i18n:name="click_here">
-                   <a tal:attributes="href python:'mail_password_form?'+ztu.make_query(userid=login_name)"
-                     i18n:translate="label_click_here_to_retrieve">click here to retrieve it</a>
-                 </span>.
-                </p>
+                <div id="forgotten-password"
+                     tal:condition="python:checkPermission('Mail forgotten password', here)">
+                    <h3 i18n:translate="box_forgot_password_option">
+                        Forgot your password?
+                    </h3>
+                    <p i18n:translate="help_password_retrieval">
+                        If you have forgotten your password,
+                        <span i18n:name="click_here">
+                            <a tal:attributes="href python:'mail_password_form?'+ztu.make_query(userid=login_name)"
+                               i18n:translate="label_click_here_to_retrieve">click here to retrieve it</a></span>.
+                    </p>
+                </div>
  
                 <div id="enable_cookies_message" i18n:translate="enable_cookies_message" class="portalMessage" style="display:none">
                  Cookies are not enabled. You must <span i18n:name="enable_cookies">
@@ -169,11 +173,6 @@
                      <label i18n:translate="label_login_name"
                        tal:attributes="for ac_name">Login Name</label>
  
-                     <div i18n:translate="help_login_name_caps"
-                       class="formHelp">
-                       Login names are case sensitive, make sure the caps lock key is not enabled.
-                     </div>
- 
                      <div tal:content="error">Validation error output</div>
  
                      <input type="text"
@@ -191,12 +190,6 @@
  
                      <label i18n:translate="label_password"
                        tal:attributes="for ac_password">Password</label>
- 
-                     <div class="formHelp">
-                       <div i18n:translate="help_capslock_password">
-                         Case sensitive, make sure caps lock is not enabled.
-                       </div>
-                     </div>
  
                      <div tal:content="error">Validation error output</div>
  
@@ -240,6 +233,7 @@
             </dd>
         </tal:sitelogin>
     </dl>
+</div>
 </metal:login>
 
 </div>
