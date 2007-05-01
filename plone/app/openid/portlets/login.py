@@ -14,7 +14,7 @@ class ILoginPortlet(IPortletDataProvider):
 class Assignment(base.Assignment):
     implements(ILoginPortlet)
 
-    title = _(u'Login')
+    title = _(u'OpenID login')
 
 
 class Renderer(base.Renderer):
