@@ -5,10 +5,12 @@ from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
 from plone.app.openid.portlets.login import Assignment as LoginAssignment
 from Products.CMFCore.utils import getToolByName
+from Products.PlonePAS.browser.info import PASInfoView
 
 
 def hasOpenIdPlugin(portal):
-    return portal.restrictedTraverse("@@pas_info").hasOpenIDdExtractor()
+    pas_info=PASInfoView(portal, None)
+    return pas_info.hasOpenIDdExtractor()
 
 
 def createOpenIdPlugin(portal, out):
@@ -48,11 +50,6 @@ def importVarious(context):
     # Only run step if a flag file is present (e.g. not an extension profile)
     if context.readDataFile('openid-pas.txt') is None:
         return
-
-    from plone.openid.config import HAS_OPENID
-    if not HAS_OPENID:
-        # XXX figure out correct error path
-        raise "OpenID not present"
 
     site = context.getSite()
     out = StringIO()
