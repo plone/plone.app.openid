@@ -19,7 +19,7 @@
 
         <input type="hidden" name="form.submitted" value="1" />
         <input type="hidden" name="came_from" value=""
-               tal:attributes="value context/@@plone_context_state/current_page_url" />
+               tal:attributes="value context/@@plone_context_state/current_base_url" />
 
         <div class="field">
           <label for="" i18n:translate="label_identity_url"
