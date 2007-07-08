@@ -15,11 +15,7 @@ Requirements
 
         easy_install python-openid
 
-    3. The 'python-urljr' python package must be installed in your python
-       path. This package can be downloaded from same aforementioned site or
-       installed via the easy_install command::
-
-        easy_install python-urljr
+       Version 2.0 or later is required.
 
 Features
 
