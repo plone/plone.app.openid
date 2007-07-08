@@ -1,14 +1,12 @@
 from setuptools import setup, find_packages
-import sys, os
 
-version = '1.0b3'
+version = '1.0rc2'
 
 setup(name='plone.app.openid',
       version=version,
       description="Plone OpenID authentication support",
       long_description="""\
 """,
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Framework :: Zope2",
