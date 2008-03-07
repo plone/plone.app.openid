@@ -1,5 +1,5 @@
 Overview
---------
+========
 
 This packages makes Plone a complete OpenID consumer, allowing people
 to authenticate in a site using their OpenID identity. It relies on the
@@ -17,7 +17,7 @@ Plone.
 
 
 Installation
-------------
+============
 
 If all requirements have been installed you should see an *OpenID
 Authentication Support* appearin the *Add/Remove Products* page in

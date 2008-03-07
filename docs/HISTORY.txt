@@ -1,14 +1,25 @@
-Changelog for plone.app.openid
+Changelog
+=========
 
-    (name of developer listed in brackets)
 
-plone.app.openid - 1.0.1  August 17, 2007
+1.0.2  March 7, 2008
+----------------------
 
-    - Remove use of javascript in login portlet
-      [ree]
+- Correct the title of the portlet type to read 'OpenID Login' instead of
+  just 'Login'.
+  [wichert]
 
-plone.app.openid - 1.0  August 15, 2007
 
-    - First stable release.
-      [wichert]
+1.0.1  August 17, 2007
+----------------------
+
+- Remove use of javascript in login portlet
+  [ree]
+
+
+1.0  August 15, 2007
+--------------------
+
+- First stable release.
+  [wichert]
 
