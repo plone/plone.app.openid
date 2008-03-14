@@ -4,6 +4,10 @@ Changelog
 1.1  Unreleased
 ---------------
 
+- Fixing erroneous (duplicate) translation ID. This fixes
+  http://dev.plone.org/plone/ticket/7764
+  [limi]
+
 
 1.0.2  March 7, 2008
 ----------------------
