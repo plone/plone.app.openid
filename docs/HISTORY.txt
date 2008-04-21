@@ -1,8 +1,12 @@
 Changelog
 =========
 
-1.1  Unreleased
+1.1  unreleased
 ---------------
+
+
+1.0.3  April 21, 2008
+---------------------
 
 - Added missing i18n markup to portlets.xml.
   [hannosch]
