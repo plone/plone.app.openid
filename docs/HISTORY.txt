@@ -4,6 +4,10 @@ Changelog
 1.1  unreleased
 ---------------
 
+- Now including plone.app.portlets in the zcml.  Fixes zope instance
+  startup error under certain circumstances.
+  [maurits]
+
 
 1.0.3  April 21, 2008
 ---------------------
