@@ -4,6 +4,11 @@ Changelog
 1.1  unreleased
 ---------------
 
+- Added missing customized version of login_failed.cpt which was causing an
+  error on a failed standard login when OpenID support is installed.  This closes
+  http://dev.plone.org/plone/ticket/7268
+  [davisagli]
+
 - Now including plone.app.portlets in the zcml.  Fixes zope instance
   startup error under certain circumstances.
   [maurits]
