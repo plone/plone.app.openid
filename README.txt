@@ -7,7 +7,7 @@ plone.openid_ package to implement authentication of identities and
 needs an external session management plugin such as plone.session_ to
 add session management.
 
-You also need version 2.0.x of the python-openid_ package from JanRain. If this
+You also need version 2.2.x of the python-openid_ package from JanRain. If this
 package is not installed you will not be able to install OpenID support in
 Plone.
 
