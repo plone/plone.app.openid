@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1  unreleased
----------------
+1.1  August 19, 2008
+--------------------
 
 - Added missing customized version of login_failed.cpt which was causing an
   error on a failed standard login when OpenID support is installed.  This closes
