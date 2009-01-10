@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1.1
+-----
+
+- Specified package dependencies.
+  [hannosch]
+
+
 1.1  August 19, 2008
 --------------------
 

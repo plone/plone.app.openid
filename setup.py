@@ -23,11 +23,21 @@ setup(name='plone.app.openid',
       namespace_packages = ['plone', 'plone.app'],
       include_package_data=True,
       zip_safe=False,
+      extras_require=dict(
+        test=[
+            'Products.PloneTestCase',
+        ]
+      ),
       install_requires=[
-        'plone.openid',
         'setuptools',
+        'plone.openid',
+        'plone.portlets',
+        'plone.app.portlets',
+        'zope.component',
+        'zope.interface',
+        'Plone',
+        'Products.CMFCore',
+        'Products.PlonePAS',
+        # 'Zope2',
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
       )
