@@ -9,7 +9,7 @@
 ##title=Validate OpenID login attempt
 ##
 
-from Products.CMFPlone import PloneMessageFactory as _
+from plone.app.openid import PloneMessageFactory as _
 
 if not openid_url:
     context.plone_utils.addPortalMessage(_(u'Please enter your identity URL.'), 'warning')

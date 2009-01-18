@@ -16,7 +16,7 @@
       description="Adds support for authenticating with OpenID credentials in a Plone site"
       directory="profiles/default"
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      for="Products.CMFCore.interfaces.ISiteRoot"
       />
 
    <cmf:registerDirectory name="ploneopenid"/>

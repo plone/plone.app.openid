@@ -4,6 +4,9 @@ Changelog
 2.0
 ---
 
+- Use our own PloneMessageFactory and remove the dependency on CMFPlone.
+  [hannosch]
+
 - Specified package dependencies.
   [hannosch]
 
@@ -16,7 +19,7 @@ Changelog
   http://dev.plone.org/plone/ticket/7268
   [davisagli]
 
-- Now including plone.app.portlets in the zcml.  Fixes zope instance
+- Now including plone.app.portlets in the zcml. Fixes zope instance
   startup error under certain circumstances.
   [maurits]
 

@@ -3,7 +3,8 @@ from zope.component import getMultiAdapter
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
-from Products.CMFPlone import PloneMessageFactory as _
+
+from plone.app.openid import PloneMessageFactory as _
 
 
 class ILoginPortlet(IPortletDataProvider):
