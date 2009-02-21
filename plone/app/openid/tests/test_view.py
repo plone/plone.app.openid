@@ -10,7 +10,8 @@ class TestOpenIdView(OpenIdTestCase):
         self.assertEquals(pas_info.hasLoginPasswordExtractor(), True)
 
     def test_OpenIdInstalled(self):
-        self.portal.portal_quickinstaller.installProduct("plone.app.openid")
+        self.portal.portal_setup.runAllImportStepsFromProfile(
+            'profile-plone.app.openid:default')
         pas_info=self.pas_info
         self.assertEquals(pas_info.hasOpenIDdExtractor(), True)
         self.assertEquals(pas_info.hasLoginPasswordExtractor(), True)
@@ -20,7 +21,8 @@ class TestOpenIdView(OpenIdTestCase):
         for (id, plugin) in plugins:
             if ILoginPasswordExtractionPlugin.providedBy(plugin):
                 plugin.manage_activateInterfaces(interfaces=())
-        self.portal.portal_quickinstaller.installProduct("plone.app.openid")
+        self.portal.portal_setup.runAllImportStepsFromProfile(
+            'profile-plone.app.openid:default')
 
         pas_info=self.pas_info
         self.assertEquals(pas_info.hasOpenIDdExtractor(), True)

@@ -4,6 +4,9 @@ Changelog
 2.0
 ---
 
+- Avoid a test dependency on quick installer.
+  [hannosch]
+
 - Use our own PloneMessageFactory and remove the dependency on CMFPlone.
   [hannosch]
 
