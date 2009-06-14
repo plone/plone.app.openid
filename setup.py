@@ -38,6 +38,10 @@ setup(name='plone.app.openid',
         'zope.interface',
         'Products.CMFCore',
         'Products.PlonePAS',
-        # 'Zope2',
+        'Zope2',
       ],
+      entry_points="""
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )
