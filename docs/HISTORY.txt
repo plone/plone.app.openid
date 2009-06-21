@@ -4,6 +4,10 @@ Changelog
 2.0
 ---
 
+- Made the addLoginPortlet function a bit more forgiving, when portlets aren't
+  available.
+  [hannosch]
+
 - Added the z3c.autoinclude entry point so this package is automatically loaded
   on Plone 3.3 and above.
   [hannosch]

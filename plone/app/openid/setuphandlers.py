@@ -1,4 +1,4 @@
-from zope.component import getUtility
+from zope.component import queryUtility
 from zope.component import getMultiAdapter
 from StringIO import StringIO
 from plone.portlets.interfaces import IPortletAssignmentMapping
@@ -39,11 +39,12 @@ def activatePlugin(portal, out, plugin):
 
 
 def addLoginPortlet(portal, out):
-    leftColumn = getUtility(IPortletManager, name=u'plone.leftcolumn', context=portal)
-    left = getMultiAdapter((portal, leftColumn,), IPortletAssignmentMapping, context=portal)
-    if u'openid-login' not in left:
-        print >>out, "Adding OpenID login portlet to the left column"
-        left[u'openid-login'] = LoginAssignment()
+    leftColumn = queryUtility(IPortletManager, name=u'plone.leftcolumn', context=portal)
+    if leftColumn is not None:
+        left = getMultiAdapter((portal, leftColumn,), IPortletAssignmentMapping, context=portal)
+        if u'openid-login' not in left:
+            print >>out, "Adding OpenID login portlet to the left column"
+            left[u'openid-login'] = LoginAssignment()
 
 
 def importVarious(context):
