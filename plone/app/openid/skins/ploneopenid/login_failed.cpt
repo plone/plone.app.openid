@@ -3,7 +3,7 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
-      metal:use-macro="here/main_template/macros/master"
+      metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
 <head>
@@ -16,9 +16,9 @@
 <div metal:fill-slot="main">
   <div id="content"
        metal:define-macro="login_failed"
-       tal:define="auth nocall:here/acl_users/credentials_cookie_auth|here/cookie_authentication|nothing;
+       tal:define="auth nocall:context/acl_users/credentials_cookie_auth|context/cookie_authentication|nothing;
                    came_from request/came_from|request/HTTP_REFERER|nothing;
-                   came_from python:test(utool.isURLInPortal(came_from), came_from, None);
+                   came_from python:test(context.portal_url.isURLInPortal(came_from), came_from, None);
                    errors options/state/getErrors;
                    ac_identity string:__ac_identity_url;
                    ac_name auth/name_cookie|string:__ac_name;
@@ -29,7 +29,7 @@
                    pas_info context/@@pas_info">
 
 
-    <metal:login use-macro="here/login_form/macros/login" />
+    <metal:login use-macro="context/login_form/macros/login" />
 
 
     <p i18n:translate="description_not_accept_cookies">
@@ -47,7 +47,7 @@
         You may be running web filtering software that
         disables cookies. If so, you will need to configure the
         software so that it enables you to accept cookies from
-        <span tal:content="utool" tal:omit-tag="" i18n:name="url">url</span>
+        <span tal:content="context/portal_url" tal:omit-tag="" i18n:name="url">url</span>
       </li>
       <li i18n:translate="description_still_failure_reason2">
         Your computer may be behind a firewall or proxy server

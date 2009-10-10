@@ -4,6 +4,12 @@ Changelog
 2.0
 ---
 
+- Made compatible with Plone 4.0.  Show different labels on login form
+  when site_properties/use_email_as_login is switched on (Plone 4.0).
+  Should still work in earlier Plones.
+  Refs http://dev.plone.org/plone/ticket/9214
+  [maurits]
+
 - Made the addLoginPortlet function a bit more forgiving, when portlets aren't
   available.
   [hannosch]
