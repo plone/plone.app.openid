@@ -1,13 +1,17 @@
 Changelog
 =========
 
-1.1  August 19, 2008
---------------------
+1.1.1 unreleased
+----------------
 
 - Removed msgids in portlets.xml. There is no support for
   msgids in the import of portlets.xml implementation.
   This allows to extract translatable strings with i18ndude.
   [vincentfretin]
+
+
+1.1  August 19, 2008
+--------------------
 
 - Added missing customized version of login_failed.cpt which was causing an
   error on a failed standard login when OpenID support is installed.  This closes
