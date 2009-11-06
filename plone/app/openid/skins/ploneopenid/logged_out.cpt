@@ -8,7 +8,7 @@
       <head>
           <script type="text/javascript" metal:fill-slot="javascript_head_slot">
           </script>
-    <metal:css fill-slot="css_slot">
+    <metal:css fill-slot="style_slot">
       <style type="text/css" media="all">
         input.openidUrl {
           background: White url(openid-icon.gif) 2px 3px no-repeat;

@@ -4,6 +4,10 @@ Changelog
 2.0
 ---
 
+- Replaced the css_slot with the style_slot, as it was deprecated
+  in Plone 3 and now really removed in Plone 4.
+  [maurits]
+
 - Made compatible with Plone 4.0.  Show different labels on login form
   when site_properties/use_email_as_login is switched on (Plone 4.0).
   Should still work in earlier Plones.
