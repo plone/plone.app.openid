@@ -4,8 +4,7 @@ Changelog
 2.0
 ---
 
-- Replaced the css_slot with the style_slot, as it was deprecated
-  in Plone 3 and now really removed in Plone 4.
+- Replaced the css_slot with the style_slot, as it is deprecated.
   [maurits]
 
 - Made compatible with Plone 4.0.  Show different labels on login form
