@@ -13,7 +13,7 @@
 
     <dd class="portletItem odd"
         tal:define="ac_identity string:__ac_identity_url;">
-      <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
+      <form tal:attributes="action view/login_form"
             method="post"
             class="openidLoginForm">
 
