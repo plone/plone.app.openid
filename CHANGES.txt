@@ -4,6 +4,10 @@ Changelog
 2.0 - 2009-11-17
 ----------------
 
+- Correctly implement the 'available' property of the portlet renderer so
+  that a column with only an openid portlet doesn't show up when logged in.
+  [davisagli]
+
 - Make sure the GenericSetup profile shows up on the Plone site add form.
   [davisagli]
 
