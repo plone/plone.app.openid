@@ -4,6 +4,9 @@ Changelog
 2.0 - 2009-11-17
 ----------------
 
+- Make sure the GenericSetup profile shows up on the Plone site add form.
+  [davisagli]
+
 - Added a metadata.xml to the GenericSetup profile.
   [davisagli]
 
