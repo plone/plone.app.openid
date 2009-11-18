@@ -52,6 +52,8 @@
 
             <dd id="fieldset-openid-login">
 
+                <div class="row">
+                    <div class=" cell width-1:2 position-1:4">
                 <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
                       class="enableAutoFocus"
                       method="post"
@@ -109,6 +111,8 @@
                    </p>
 
                </form>
+                   </div>
+               </div>
            </dd>
        </tal:openid>
 
