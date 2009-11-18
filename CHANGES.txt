@@ -1,8 +1,14 @@
 Changelog
 =========
 
-2.0
----
+2.0 - 2009-11-17
+----------------
+
+- Added a metadata.xml to the GenericSetup profile.
+  [davisagli]
+
+- Register the ploneopenid-various GenericSetup import step using ZCML.
+  [davisagli]
 
 - Replaced the css_slot with the style_slot, as it is deprecated.
   [maurits]
@@ -30,18 +36,16 @@ Changelog
 - Specified package dependencies.
   [hannosch]
 
-
-1.1.1 unreleased
-----------------
+1.1.1 - unreleased
+------------------
 
 - Removed msgids in portlets.xml. There is no support for
   msgids in the import of portlets.xml implementation.
   This allows to extract translatable strings with i18ndude.
   [vincentfretin]
 
-
-1.1  August 19, 2008
---------------------
+1.1 - 2008-08-19
+----------------
 
 - Added missing customized version of login_failed.cpt which was causing an
   error on a failed standard login when OpenID support is installed.  This closes
@@ -52,9 +56,8 @@ Changelog
   startup error under certain circumstances.
   [maurits]
 
-
-1.0.3  April 21, 2008
----------------------
+1.0.3 - 2008-04-21
+------------------
 
 - Added missing i18n markup to portlets.xml.
   [hannosch]
@@ -63,25 +66,21 @@ Changelog
   http://dev.plone.org/plone/ticket/7764
   [limi]
 
-
-1.0.2  March 7, 2008
-----------------------
+1.0.2 - 2008-05-07
+------------------
 
 - Correct the title of the portlet type to read 'OpenID Login' instead of
   just 'Login'.
   [wichert]
 
-
-1.0.1  August 17, 2007
-----------------------
+1.0.1 - 2007-08-17
+------------------
 
 - Remove use of javascript in login portlet
   [ree]
 
-
-1.0  August 15, 2007
---------------------
+1.0 - 2007-08-15
+----------------
 
 - First stable release.
   [wichert]
-
