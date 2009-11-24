@@ -4,6 +4,8 @@ Changelog
 2.0b1 - unreleased
 ------------------
 
+- Point to users to @@register instead of @@join_form.
+  [esteele]
 
 2.0a1 - 2009-11-17
 ------------------
