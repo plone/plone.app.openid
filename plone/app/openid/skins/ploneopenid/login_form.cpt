@@ -52,8 +52,6 @@
 
             <dd id="fieldset-openid-login">
 
-                <div class="row">
-                    <div class=" cell width-1:2 position-1:4">
                 <form tal:attributes="action python:context.absolute_url()+'/'+template.id"
                       class="enableAutoFocus"
                       method="post"
@@ -66,17 +64,24 @@
                          tal:attributes="value came_from" />
 
 
+                     <h3 i18n:translate="help_openid_identity_url">
+                         Please type your OpenID URL below to log in.
+                     </h3>
+                     <p i18n:translate="openid_intro">
+                        If you do not have an OpenID, you may get one from 
+                        <a href="http://www.myopenid.com/"
+                           class="link-plain"
+                           target="_blank"
+                           i18n:name="openid_myopenid">MyOpenID.com</a>.
+                     </p>
+                     
+
                    <div class="field"
-                        tal:define="error python:errors.get(identity_url, None);"
-                        tal:attributes="class python:test(error, 'field error', 'field')">
+                      tal:define="error python:errors.get(identity_url, None);"
+                      tal:attributes="class python:test(error, 'field error', 'field')">
 
                      <label i18n:translate="label_identity_url"
                        tal:attributes="for ac_identity">OpenID URL</label>
-
-                     <div i18n:translate="help_openid_identity_url"
-                       class="formHelp">
-                       Please type your OpenID URL below to log in.
-                     </div>
 
                      <div tal:content="error">Validation error output</div>
 
@@ -101,18 +106,7 @@
                           i18n:translate="info_openid">What is OpenID?</a>
                   </div>
 
-                   <p class="discreet"
-                       i18n:translate="openid_intro">
-                      If you do not have an OpenID, you may get one from 
-                      <a href="http://www.myopenid.com/"
-                         class="link-plain"
-                         target="_blank"
-                         i18n:name="openid_myopenid">MyOpenID.com</a>.
-                   </p>
-
                </form>
-                   </div>
-               </div>
            </dd>
        </tal:openid>
 

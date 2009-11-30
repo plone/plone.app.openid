@@ -4,6 +4,10 @@ Changelog
 2.0b1 - unreleased
 ------------------
 
+- Make html structure of openid login section similar to plone login
+  section so that we can use same css.
+  [smcmahon]
+
 - Point to users to @@register instead of @@join_form.
   [esteele]
 
