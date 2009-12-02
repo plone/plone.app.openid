@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0b1 - unreleased
+2.0b1 - 2009-12-01
 ------------------
 
 - Make html structure of openid login section similar to plone login
