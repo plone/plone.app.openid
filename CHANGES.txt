@@ -4,6 +4,8 @@ Changelog
 2.0b2 - unreleased
 ------------------
 
+- Clarified package metadata.
+  [hannosch]
 
 2.0b1 - 2009-12-01
 ------------------
