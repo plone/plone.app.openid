@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0b2 - unreleased
+2.0b2 - 2009-12-27
 ------------------
 
 - Clarified package metadata.
