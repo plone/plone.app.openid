@@ -23,7 +23,7 @@
       </head>
 <body>
 
-  <div metal:fill-slot="main"
+  <metal:main fill-slot="main"
     tal:define="auth nocall:context/acl_users/credentials_cookie_auth|context/cookie_authentication|nothing;
                came_from request/came_from|request/HTTP_REFERER|nothing;
                came_from python:test(context.portal_url.isURLInPortal(came_from), came_from, None);
@@ -38,28 +38,28 @@
                ztu modules/ZTUtils;
                pas_info context/@@pas_info">
 
-<tal:reallyloggedout condition="isAnon">
-  <h1 class="documentFirstHeading"
-      i18n:translate="heading_signed_out">You are now logged out</h1>
+    <tal:reallyloggedout condition="isAnon">
+      <h1 class="documentFirstHeading"
+          i18n:translate="heading_signed_out">You are now logged out</h1>
 
-    <p class="documentDescription" 
-       i18n:translate="description_loginagain">You can log in again below.</p>
+        <div class="documentDescription" 
+           i18n:translate="description_loginagain">You can log in again below.</div>
 
-<metal:login use-macro="context/login_form/macros/login" />
+    <metal:login use-macro="context/login_form/macros/login" />
 
-</tal:reallyloggedout>
+    </tal:reallyloggedout>
 
-<tal:notloggedoutafterall tal:condition="not: isAnon">
-    <h1 class="documentFirstHeading"
-        i18n:translate="heading_quit_to_log_out">Quit your web browser to log out</h1>
-    
-    <p i18n:translate="description_quit_to_log_out">
-    Because you are logged in via HTTP authentication 
-    (i.e. the Zope Management Interface), the only
-    way to log out is to quit your web browser.
-    </p>
-</tal:notloggedoutafterall>
+    <tal:notloggedoutafterall tal:condition="not: isAnon">
+        <h1 class="documentFirstHeading"
+            i18n:translate="heading_quit_to_log_out">Quit your web browser to log out</h1>
 
-</div>
+        <div class="documentDescription" i18n:translate="description_quit_to_log_out">
+        Because you are logged in via HTTP authentication 
+        (i.e. the Zope Management Interface), the only
+        way to log out is to quit your web browser.
+        </div>
+    </tal:notloggedoutafterall>
+
+</metal:main>
 </body>
 </html>
