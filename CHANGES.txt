@@ -1,16 +1,15 @@
 Changelog
 =========
 
-2.0b3 - unreleased
+2.0b3 - 2010-02-17
 ------------------
 
 - Updated login-related templates to the recent markup conventions.
-  References http://dev.plone.org/plone/ticket/9981
+  References http://dev.plone.org/plone/ticket/9981.
   [spliter]
 
-- Updated templates to disable the columns with 'disable_MANAGER_NAME' pattern
+- Updated templates to disable the columns with 'disable_MANAGER_NAME' pattern.
   [spliter]
-
 
 2.0b2 - 2009-12-27
 ------------------
