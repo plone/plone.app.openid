@@ -6,7 +6,7 @@
       <a href="#" 
          class="tile"
          tal:attributes="href view/login_form"
-         i18n:translate="box_sign_in">OpenID Log in</a>
+         i18n:translate="box_sign_in">OpenID Login</a>
       <span class="portletTopRight"></span>
     </dt>
 
