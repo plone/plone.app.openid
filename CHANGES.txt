@@ -1,9 +1,11 @@
 Changelog
 =========
 
-2.0b4 - unreleased
-------------------
+2.0 - 2010-07-01
+----------------
 
+- 'login' is a noun; 'log in' is a verb. Fixes #10025.
+  [davisagli]
 
 2.0b3 - 2010-02-17
 ------------------
