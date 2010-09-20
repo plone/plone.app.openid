@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.1 unreleased
-----------------
+1.1.1 September 19, 2010
+------------------------
 
 - Removed msgids in portlets.xml. There is no support for
   msgids in the import of portlets.xml implementation.
