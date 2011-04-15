@@ -1,8 +1,12 @@
 Changelog
 =========
 
+
 2.0.2 - unreleased
 ------------------
+
+- Add MANIFEST.in.
+  [WouterVH]
 
 
 2.0.1 - 2010-07-18
@@ -11,11 +15,13 @@ Changelog
 - Update license to GPL version 2 only.
   [hannosch]
 
+
 2.0 - 2010-07-01
 ----------------
 
 - 'login' is a noun; 'log in' is a verb. Fixes #10025.
   [davisagli]
+
 
 2.0b3 - 2010-02-17
 ------------------
@@ -27,11 +33,13 @@ Changelog
 - Updated templates to disable the columns with 'disable_MANAGER_NAME' pattern.
   [spliter]
 
+
 2.0b2 - 2009-12-27
 ------------------
 
 - Clarified package metadata.
   [hannosch]
+
 
 2.0b1 - 2009-12-01
 ------------------
@@ -42,6 +50,7 @@ Changelog
 
 - Point to users to @@register instead of @@join_form.
   [esteele]
+
 
 2.0a1 - 2009-11-17
 ------------------
@@ -85,13 +94,15 @@ Changelog
 - Specified package dependencies.
   [hannosch]
 
-1.1.1 - unreleased
+
+1.1.1 - 2010-09-19
 ------------------
 
 - Removed msgids in portlets.xml. There is no support for
   msgids in the import of portlets.xml implementation.
   This allows to extract translatable strings with i18ndude.
   [vincentfretin]
+
 
 1.1 - 2008-08-19
 ----------------
@@ -105,6 +116,7 @@ Changelog
   startup error under certain circumstances.
   [maurits]
 
+
 1.0.3 - 2008-04-21
 ------------------
 
@@ -115,6 +127,8 @@ Changelog
   http://dev.plone.org/plone/ticket/7764
   [limi]
 
+
+
 1.0.2 - 2008-05-07
 ------------------
 
@@ -122,11 +136,13 @@ Changelog
   just 'Login'.
   [wichert]
 
+
 1.0.1 - 2007-08-17
 ------------------
 
 - Remove use of javascript in login portlet
   [ree]
+
 
 1.0 - 2007-08-15
 ----------------
