@@ -30,4 +30,9 @@
 
    <include package="plone.openid" />
 
+   <subscriber
+      for="*
+           plone.openid.interfaces.IOpenIDRegistrationReceivedEvent"
+      handler=".subscribers.registration_received" />
+
 </configure>

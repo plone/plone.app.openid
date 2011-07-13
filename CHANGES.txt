@@ -2,8 +2,12 @@ Changelog
 =========
 
 
-2.0.2 - unreleased
+2.1 - unreleased
 ------------------
+
+- Added support for updating the user profile if plone.openid successfully
+  retrieves simple registration data from the upstream OpenID server.
+  [davidblewett]
 
 - Add MANIFEST.in.
   [WouterVH]
