@@ -17,10 +17,9 @@ def registration_received(principal, event):
     location = []
     for fname, title in {'postcode': 'Postal Code', 'country': 'Country',
                          'timezone': 'Time Zone'}.items():
-        if fname in event.simple_registration and \
-           event.simple_registration[fname]:
-            location.append('%s: %s' %
-                            (title, event.simple_registration[fname]))
+        reg_value = event.simple_registration.get(fname, '')
+        if reg_value:
+            location.append('%s: %s' % (title, reg_value))
     if location:
         new_properties['location'] = ', '.join(location)
 
