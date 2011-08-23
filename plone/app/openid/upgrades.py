@@ -1,5 +1,7 @@
 from urllib import quote_plus
 
+from zope.app.component.hooks import getSite
+
 from Products.CMFCore.utils import getToolByName
 from Products.PlonePAS.interfaces.plugins import IMutablePropertiesPlugin
 from Products.PluggableAuthService.interfaces.plugins import IPropertiesPlugin
@@ -11,9 +13,10 @@ def update_property_usernames(context):
     are updated to use URL-encoded OpenID identity URLs, to avoid traversal
     issues when Plone encounters a / in the URL.
     """
-    acl = getToolByName(context, 'acl_users')
+    portal = getSite()
+    acl = getToolByName(portal, 'acl_users')
     plugin_name, property_plugin = \
-        getPASPlugin(context,
+        getPASPlugin(acl,
                      plugin_type=IPropertiesPlugin,
                      provides=IMutablePropertiesPlugin)
     user_ids = [
