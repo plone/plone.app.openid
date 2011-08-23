@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>2.0b2</version>
+  <version>003</version>
+  <dependencies>
+     <dependency>profile-plone.openid:default</dependency>
+  </dependencies>
 </metadata>

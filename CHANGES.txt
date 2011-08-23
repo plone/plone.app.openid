@@ -5,6 +5,10 @@ Changelog
 2.1 - unreleased
 ------------------
 
+- Added upgrade step to update any currently-saved user profile keys to use
+  a URL-encoded value to avoid traversal issues with embedded / characters.
+  [davidblewett]
+
 - Added support for updating the user profile if plone.openid successfully
   retrieves simple registration data from the upstream OpenID server.
   [davidblewett]
