@@ -37,7 +37,7 @@
 
   <genericsetup:upgradeStep
         source="*"
-        destination="003"
+        destination="004"
         profile="plone.app.openid:default"
         title="Update user ID's stored in the IMutablePropertiesPlugin"
         description=""

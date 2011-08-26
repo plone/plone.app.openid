@@ -1,12 +1,12 @@
-from urllib import quote_plus
+from urllib import unquote_plus
 
 from zope.app.component.hooks import getSite
 
 from Products.CMFCore.utils import getToolByName
-from Products.PlonePAS.interfaces.plugins import IMutablePropertiesPlugin
-from Products.PluggableAuthService.interfaces.plugins import IPropertiesPlugin
 
-from plone.openid.util import getPASPlugin
+from plone.openid.util import encodeIdentityURL, getPASPlugin
+from plone.openid.upgrades import urlencode_usernames
+
 
 def update_property_usernames(context):
     """This upgrade step is intended to ensure that any current user profiles
@@ -14,22 +14,35 @@ def update_property_usernames(context):
     issues when Plone encounters a / in the URL.
     """
     portal = getSite()
-    acl = getToolByName(portal, 'acl_users')
-    plugin_name, property_plugin = \
-        getPASPlugin(acl,
-                     plugin_type=IPropertiesPlugin,
-                     provides=IMutablePropertiesPlugin)
-    user_ids = [
-        user_id
-        for user_id in property_plugin._storage.keys()
-        if (user_id.startswith("http:") or user_id.startswith("https:"))
-    ]
-    for user_id in user_ids:
-        user = acl.getUserById(user_id)
-        sheet = property_plugin.getPropertiesForUser(user)
-        # The following is a bit of a hack
-        old_getId = user.getId
-        user.getId = lambda: quote_plus(user_id)
-        property_plugin.setPropertiesForUser(user, sheet)
-        property_plugin.deleteUser(user_id)
-        user.getId = old_getId
+    memberdata = getToolByName(portal, 'portal_memberdata')
+    all_props = memberdata.propertyIds()
+    membership = getToolByName(portal, 'portal_membership')
+    openid_name, openid = getPASPlugin(portal)
+    all_registrations = openid.store.getAllRegistrations()
+
+    users = membership.searchForMembers()
+    legacy_user_ids = dict([
+        (user.getId(), encodeIdentityURL(user.getId()))
+        for user in users
+        if (user.getId().startswith("http:") or \
+            user.getId().startswith("https:"))
+    ])
+    # Fix the short window of badly-encoded usernames
+    legacy_user_ids.update(dict([
+        (user.getId(), encodeIdentityURL(unquote_plus(user.getId())))
+        for user in users
+        if (user.getId().startswith("http%3A") or \
+            user.getId().startswith("https%3A"))
+    ]))
+
+    for legacy_user_id, new_user_id in legacy_user_ids.items():
+        # Copy registration from old identity_url to new encoded ID
+        all_registrations[new_user_id] = all_registrations[legacy_user_id]
+        legacy_member = membership.getMemberById(legacy_user_id)
+        new_member = membership.getMemberById(new_user_id)
+        properties = dict([
+            (property_id, legacy_member.getProperty(property_id))
+            for property_id in all_props
+        ])
+        new_member.setMemberProperties(properties)
+        memberdata.deleteMemberData(legacy_user_id)
