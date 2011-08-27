@@ -35,14 +35,4 @@
            plone.openid.interfaces.IOpenIDRegistrationReceivedEvent"
       handler=".subscribers.registration_received" />
 
-  <genericsetup:upgradeStep
-        source="*"
-        destination="004"
-        profile="plone.app.openid:default"
-        title="Update user ID's stored in the IMutablePropertiesPlugin"
-        description=""
-        sortkey="1"
-        handler="plone.app.openid.upgrades.update_property_usernames"
-        />
-
 </configure>

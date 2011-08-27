@@ -4,7 +4,6 @@ from StringIO import StringIO
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
 from plone.app.openid.portlets.login import Assignment as LoginAssignment
-from plone.app.openid.upgrades import update_property_usernames
 from plone.openid.upgrades import update_bbb_attributes
 from Products.CMFCore.utils import getToolByName
 from Products.PlonePAS.browser.info import PASInfoView
@@ -62,4 +61,3 @@ def importVarious(context):
 
     addLoginPortlet(site, out)
     update_bbb_attributes(site)
-    update_property_usernames(site)
