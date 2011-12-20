@@ -6,14 +6,14 @@ from Products.PluggableAuthService.interfaces.plugins \
 class TestOpenIdView(OpenIdTestCase):
     def test_DefaultConfig(self):
         pas_info=self.pas_info
-        self.assertEquals(pas_info.hasOpenIDdExtractor(), False)
+        self.assertEquals(pas_info.hasOpenIDExtractor(), False)
         self.assertEquals(pas_info.hasLoginPasswordExtractor(), True)
 
     def test_OpenIdInstalled(self):
         self.portal.portal_setup.runAllImportStepsFromProfile(
             'profile-plone.app.openid:default')
         pas_info=self.pas_info
-        self.assertEquals(pas_info.hasOpenIDdExtractor(), True)
+        self.assertEquals(pas_info.hasOpenIDExtractor(), True)
         self.assertEquals(pas_info.hasLoginPasswordExtractor(), True)
 
     def testOnlyOpenIdInstalled(self):
@@ -25,7 +25,7 @@ class TestOpenIdView(OpenIdTestCase):
             'profile-plone.app.openid:default')
 
         pas_info=self.pas_info
-        self.assertEquals(pas_info.hasOpenIDdExtractor(), True)
+        self.assertEquals(pas_info.hasOpenIDExtractor(), True)
         self.assertEquals(pas_info.hasLoginPasswordExtractor(), False)
 
 

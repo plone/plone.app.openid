@@ -5,6 +5,11 @@ Changelog
 2.0.2 - unreleased
 ------------------
 
+- Use fixed spelling of method name hasOpenIDExtractor from PlonePAS.
+  We depend on Products.PlonePAS 2.0.10dev or higher for this.
+  Fixes http://dev.plone.org/ticket/11040
+  [maurits]
+
 - Add MANIFEST.in.
   [WouterVH]
 

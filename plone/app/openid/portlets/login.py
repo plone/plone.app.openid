@@ -30,7 +30,7 @@ class Renderer(base.Renderer):
     def available(self):
         if not self.portal_state.anonymous():
             return False
-        if not self.pas_info.hasOpenIDdExtractor():
+        if not self.pas_info.hasOpenIDExtractor():
             return False
         page = self.request.get('URL', '').split('/')[-1]
         return page not in ('login_form', '@@register')

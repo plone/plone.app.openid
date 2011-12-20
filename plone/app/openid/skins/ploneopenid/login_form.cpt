@@ -46,7 +46,7 @@
     <div id="login-form">
         <dl class="enableFormTabbing">
 
-            <tal:openid condition="pas_info/hasOpenIDdExtractor">
+            <tal:openid condition="pas_info/hasOpenIDExtractor">
                 <dt id="fieldsetlegend-openid-login" i18n:translate="legend_openid">
                     OpenID login
                 </dt>

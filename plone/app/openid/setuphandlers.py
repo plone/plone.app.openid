@@ -10,7 +10,7 @@ from Products.PlonePAS.browser.info import PASInfoView
 
 def hasOpenIdPlugin(portal):
     pas_info=PASInfoView(portal, None)
-    return pas_info.hasOpenIDdExtractor()
+    return pas_info.hasOpenIDExtractor()
 
 
 def createOpenIdPlugin(portal, out):
