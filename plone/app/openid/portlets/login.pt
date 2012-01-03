@@ -3,7 +3,7 @@
   <dl class="portlet portletOpenIdLogin">
     <dt class="portletHeader">
       <span class="portletTopLeft"></span>
-      <a href="#" 
+      <a href="#"
          class="tile"
          tal:attributes="href view/login_form"
          i18n:translate="box_sign_in">OpenID Login</a>

@@ -13,7 +13,7 @@ from plone.app.openid import PloneMessageFactory as _
 
 if not openid_url:
     context.plone_utils.addPortalMessage(_(u'Please enter your identity URL.'), 'warning')
-    state.setError('openid_url', 
+    state.setError('openid_url',
         _(u'Please enter your identity URL.'), 'openid_url_required')
 
 return state

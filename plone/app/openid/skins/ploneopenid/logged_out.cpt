@@ -42,7 +42,7 @@
       <h1 class="documentFirstHeading"
           i18n:translate="heading_signed_out">You are now logged out</h1>
 
-        <div class="documentDescription" 
+        <div class="documentDescription"
            i18n:translate="description_loginagain">You can log in again below.</div>
 
     <metal:login use-macro="context/login_form/macros/login" />
@@ -54,7 +54,7 @@
             i18n:translate="heading_quit_to_log_out">Quit your web browser to log out</h1>
 
         <div class="documentDescription" i18n:translate="description_quit_to_log_out">
-        Because you are logged in via HTTP authentication 
+        Because you are logged in via HTTP authentication
         (i.e. the Zope Management Interface), the only
         way to log out is to quit your web browser.
         </div>
