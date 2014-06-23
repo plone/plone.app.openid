@@ -10,10 +10,13 @@ setup(name='plone.app.openid',
       classifiers=[
           "Environment :: Web Environment",
           "Framework :: Plone",
+          "Framework :: Plone :: 4.3",
+          "Framework :: Plone :: 5.0",
           "Framework :: Zope2",
           "License :: OSI Approved :: GNU General Public License (GPL)",
           "Operating System :: OS Independent",
           "Programming Language :: Python",
+          "Programming Language :: Python :: 2.7",
         ],
       keywords='Plone OpenID authentication consumer',
       author='Plone Foundation',
@@ -25,7 +28,7 @@ setup(name='plone.app.openid',
       include_package_data=True,
       zip_safe=False,
       extras_require=dict(
-        test=[]
+        test=['plone.app.testing']
       ),
       install_requires=[
         'setuptools',
