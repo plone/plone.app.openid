@@ -25,9 +25,7 @@ setup(name='plone.app.openid',
       include_package_data=True,
       zip_safe=False,
       extras_require=dict(
-        test=[
-            'Products.PloneTestCase',
-        ]
+        test=[]
       ),
       install_requires=[
         'setuptools',
