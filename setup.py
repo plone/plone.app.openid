@@ -5,8 +5,8 @@ version = '2.0.3dev'
 setup(name='plone.app.openid',
       version=version,
       description="Plone OpenID authentication support",
-      long_description=open("README.txt").read() + "\n" +
-                       open("CHANGES.txt").read(),
+      long_description=open("README.rst").read() + "\n" +
+                       open("CHANGES.rst").read(),
       classifiers=[
           "Environment :: Web Environment",
           "Framework :: Plone",
