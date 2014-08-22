@@ -9,7 +9,7 @@ Requirements
        (Plone 3.0 and later include this package by default)
 
     2. The 'python-openid' python package must be installed in your python
-       path. This package can be downloaded from the 
+       path. This package can be downloaded from the
        "Python Cheese Shop":http://cheeseshop.python.org package directory,
        or installed using the easy_install command::
 
@@ -18,7 +18,7 @@ Requirements
        Version 2.0 or later is required.
 
 Notes
-    
+
     OpenID authenticated users are not full members. Specifically they do
     not get the Members role. This is done to prevent all OpenID users from
     being able to see non-public content or make changes.
@@ -32,7 +32,7 @@ Features
 
     1. an OpenID PAS plugin instance is created
 
-    2. the login form is replaced with a form which also supports 
+    2. the login form is replaced with a form which also supports
        authentication via OpenID identity URLs.
 
     3. it adds a new login portlet type for OpenID identity URL based
