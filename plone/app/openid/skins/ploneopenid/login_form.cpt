@@ -39,8 +39,7 @@
 
 <metal:login define-macro="login"
     tal:define="checkPermission nocall: context/portal_membership/checkPermission;
-                site_properties context/portal_properties/site_properties;
-                use_email_as_login site_properties/use_email_as_login|nothing;
+                use_email_as_login python:context.portal_registry['plone.use_email_as_login'];
                 ztu modules/ZTUtils;">
 <div id="content-core">
     <div id="login-form">
