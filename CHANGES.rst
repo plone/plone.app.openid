@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.3 (unreleased)
+2.0.4 (unreleased)
 ------------------
 
 - Read ``use_email_as_login`` settings from the registry instead of portal
@@ -10,6 +10,13 @@ Changelog
   means we also need to depend on Products.CMFPlone instead of
   Products.CMFCore.
   [jcerjak]
+
+
+2.0.3 (2015-02-11)
+------------------
+
+- Ported tests to plone.app.testing
+  [tomgross]
 
 
 2.0.2 (2012-01-26)
