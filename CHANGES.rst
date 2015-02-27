@@ -5,7 +5,11 @@ Changelog
 2.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Read ``use_email_as_login`` settings from the registry instead of portal
+  properties (see https://github.com/plone/Products.CMFPlone/issues/216). This
+  means we also need to depend on Products.CMFPlone instead of
+  Products.CMFCore.
+  [jcerjak]
 
 
 2.0.3 (2015-02-11)
