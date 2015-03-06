@@ -3,6 +3,7 @@ from zope.component import getMultiAdapter
 from StringIO import StringIO
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from plone.portlets.interfaces import IPortletManager
+from plone.openid.plugins.oid import addOpenIdPlugin
 from plone.app.openid.portlets.login import Assignment as LoginAssignment
 from Products.CMFCore.utils import getToolByName
 from Products.PlonePAS.browser.info import PASInfoView
@@ -15,9 +16,8 @@ def hasOpenIdPlugin(portal):
 
 def createOpenIdPlugin(portal, out):
     print >>out, "Adding an OpenId plugin"
-    acl=getToolByName(portal, "acl_users")
-    acl.manage_addProduct["plone.openid"].addOpenIdPlugin(
-            id="openid", title="OpenId authentication plugin")
+    acl = getToolByName(portal, "acl_users")
+    addOpenIdPlugin(acl, id="openid", title="OpenId authentication plugin")
 
 
 def activatePlugin(portal, out, plugin):
