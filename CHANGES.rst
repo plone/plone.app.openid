@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.4 (unreleased)
+2.1.0 (2015-03-12)
 ------------------
 
 - Read ``use_email_as_login`` settings from the registry instead of portal
