@@ -5,8 +5,12 @@ Changelog
 2.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- No need to install plone.app.openid as z2 pkg.
+  [timo]
 
+- Simplify plugin creation.
+  [tomgross]
+ 
 
 2.0.3 (2015-02-11)
 ------------------
