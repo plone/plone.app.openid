@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.4 (unreleased)
+2.0.4 (2015-05-31)
 ------------------
 
 - No need to install plone.app.openid as z2 pkg.
