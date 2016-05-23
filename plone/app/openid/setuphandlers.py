@@ -23,7 +23,6 @@ def createOpenIdPlugin(portal, out):
 def activatePlugin(portal, out, plugin):
     acl = getToolByName(portal, "acl_users")
     plugin = getattr(acl, plugin)
-    interfaces = plugin.listInterfaces()
 
     activate = []
 

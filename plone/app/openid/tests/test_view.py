@@ -1,7 +1,5 @@
-from Products.PluggableAuthService.interfaces.plugins import IExtractionPlugin
-from Products.PluggableAuthService.interfaces.plugins import ILoginPasswordExtractionPlugin
-
 from plone.app.openid.testing import PLONEAPPOPENID_INTEGRATION_TESTING
+from Products.PluggableAuthService.interfaces import plugins as plugin_ifaces
 
 import unittest2 as unittest
 
@@ -34,9 +32,9 @@ class TestOpenIdView(unittest.TestCase):
         self.assertEquals(pas_info.hasLoginPasswordExtractor(), True)
 
     def testOnlyOpenIdInstalled(self):
-        plugins = self.pas.plugins.listPlugins(IExtractionPlugin)
+        plugins = self.pas.plugins.listPlugins(plugin_ifaces.IExtractionPlugin)
         for (id, plugin) in plugins:
-            if ILoginPasswordExtractionPlugin.providedBy(plugin):
+            if plugin_ifaces.ILoginPasswordExtractionPlugin.providedBy(plugin):
                 plugin.manage_activateInterfaces(interfaces=())
         self.portal.portal_setup.runAllImportStepsFromProfile(
             'profile-plone.app.openid:default')
