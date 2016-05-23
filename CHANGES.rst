@@ -11,7 +11,7 @@ New:
 
 Fixes:
 
-- *add item here*
+- Code quality package cleanup.  [maurits]
 
 
 2.1.0 (2015-03-12)

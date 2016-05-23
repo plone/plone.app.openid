@@ -1,5 +1,7 @@
-from zope.i18nmessageid import MessageFactory
-PloneMessageFactory = MessageFactory('plone')
-
+# -*- coding: utf-8 -*-
 from AccessControl import ModuleSecurityInfo
-ModuleSecurityInfo('plone.app.openid').declarePublic('PloneMessageFactory')
+from zope.i18nmessageid import MessageFactory
+
+
+PloneMessageFactory = MessageFactory('plone')
+ModuleSecurityInfo('plone.app.openid').declarePublic('PloneMessageFactory')  # noqa
