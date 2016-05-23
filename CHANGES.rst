@@ -11,7 +11,7 @@ New:
 
 Fixes:
 
-- pep8/pyflakes.  [maurits]
+- Code quality package cleanup.  [maurits]
 
 
 2.1.0 (2015-03-12)

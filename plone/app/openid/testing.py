@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from zope.configuration import xmlconfig
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing.layers import IntegrationTesting
+from zope.configuration import xmlconfig
 
 
 class PloneAppOpenidLayer(PloneSandboxLayer):
@@ -21,4 +21,4 @@ PLONEAPPOPENID_FIXTURE = PloneAppOpenidLayer()
 
 PLONEAPPOPENID_INTEGRATION_TESTING = IntegrationTesting(
     bases=(PLONEAPPOPENID_FIXTURE,),
-    name="PloneAppCollectionLayer:Integration")
+    name='PloneAppCollectionLayer:Integration')

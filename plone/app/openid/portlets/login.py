@@ -1,10 +1,10 @@
-from zope.interface import implements
-from zope.component import getMultiAdapter
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.portlets.interfaces import IPortletDataProvider
-from plone.app.portlets.portlets import base
-
+# -*- coding: utf-8 -*-
 from plone.app.openid import PloneMessageFactory as _
+from plone.app.portlets.portlets import base
+from plone.portlets.interfaces import IPortletDataProvider
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.component import getMultiAdapter
+from zope.interface import implements
 
 
 class ILoginPortlet(IPortletDataProvider):
@@ -37,7 +37,7 @@ class Renderer(base.Renderer):
         return page not in ('login_form', '@@register')
 
     def login_form(self):
-        return '%s/login_form' % self.portal_state.portal_url()
+        return '{0}/login_form'.format(self.portal_state.portal_url())
 
     render = ViewPageTemplateFile('login.pt')
 
