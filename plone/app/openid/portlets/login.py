@@ -23,7 +23,8 @@ class Renderer(base.Renderer):
     def __init__(self, context, request, view, manager, data):
         base.Renderer.__init__(self, context, request, view, manager, data)
 
-        self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
+        self.portal_state = getMultiAdapter(
+            (context, request), name=u'plone_portal_state')
         self.pas_info = getMultiAdapter((context, request), name=u'pas_info')
 
     @property
@@ -37,7 +38,6 @@ class Renderer(base.Renderer):
 
     def login_form(self):
         return '%s/login_form' % self.portal_state.portal_url()
-
 
     render = ViewPageTemplateFile('login.pt')
 
