@@ -11,11 +11,16 @@ Breaking changes:
 
 New features:
 
-- *add item here*
+- Added uninstall profile.  [maurits]
+
+- Replaced import step with post_handler.  [maurits]
 
 Bug fixes:
 
-- *add item here*
+- Added correct addview to our portlets.xml, so you can add it.
+  Added upgrade step to replace current portlet type definition.
+  The automatically added portlet works, but you cannot add another one.
+  [maurits]
 
 
 2.1.1 (2016-05-24)

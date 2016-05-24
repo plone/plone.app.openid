@@ -4,6 +4,7 @@
     i18n:domain="plone">
 
  <portlet
+   addview="portlets.OpenIDLogin"
    title="OpenID Login"
    description="A portlet which can render an OpenID log-in box"
    i18n:attributes="title;
