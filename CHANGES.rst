@@ -11,7 +11,7 @@ Breaking changes:
 
 New features:
 
-- *add item here*
+- Replaced import step with post_handler.  [maurits]
 
 Bug fixes:
 

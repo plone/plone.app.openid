@@ -41,6 +41,7 @@ setup(
         'Products.CMFPlone',
         'Products.PlonePAS>=2.0.10dev',
         'Products.PluggableAuthService',
+        'Products.GenericSetup>=1.8.2',
         'Zope2',
     ],
     entry_points="""

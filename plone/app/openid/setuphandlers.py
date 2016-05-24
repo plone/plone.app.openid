@@ -59,11 +59,7 @@ def addLoginPortlet(portal, out):
 
 
 def importVarious(context):
-    # Only run step if a flag file is present (e.g. not an extension profile)
-    if context.readDataFile('openid-pas.txt') is None:
-        return
-
-    site = context.getSite()
+    site = getToolByName(context, 'portal_url').getPortalObject()
     out = StringIO()
     if not hasOpenIdPlugin(site):
         createOpenIdPlugin(site, out)
