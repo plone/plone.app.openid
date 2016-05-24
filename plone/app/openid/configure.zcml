@@ -24,6 +24,16 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:upgradeStep
+      zcml:condition="installed openid.yadis"
+      title="Register portlet with correct addview"
+      description="Our portlet may have been registered with an empty string as addview, which means you cannot add it anywhere."
+      source="2.0b2"
+      destination="1000"
+      handler=".setuphandlers.registerPortletAddview"
+      profile="plone.app.openid:default"
+      />
+
    <cmf:registerDirectory name="ploneopenid"/>
 
    <include package=".portlets" />
