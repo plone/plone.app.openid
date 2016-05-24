@@ -47,6 +47,13 @@ def activatePlugin(portal, out, plugin):
     plugin.manage_activateInterfaces(activate)
 
 
+def removeOpenIdPlugin(portal):
+    if hasOpenIdPlugin(portal):
+        acl = getToolByName(portal, 'acl_users')
+        acl._delObject('openid')
+        logger.info('Removed openid plugin from acl_users.')
+
+
 def addLoginPortlet(portal, out):
     leftColumn = queryUtility(
         IPortletManager, name=u'plone.leftcolumn', context=portal)
@@ -56,6 +63,17 @@ def addLoginPortlet(portal, out):
         if u'openid-login' not in left:
             print >>out, 'Adding OpenID login portlet to the left column'  # noqa
             left[u'openid-login'] = LoginAssignment()
+
+
+def removeLoginPortlet(portal):
+    leftColumn = queryUtility(
+        IPortletManager, name=u'plone.leftcolumn', context=portal)
+    if leftColumn is not None:
+        left = getMultiAdapter((portal, leftColumn,),
+                               IPortletAssignmentMapping, context=portal)
+        if u'openid-login' in left:
+            del left[u'openid-login']
+            logger.info('Removed OpenID login portlet from the left column')
 
 
 def importVarious(context):
@@ -86,3 +104,9 @@ def registerPortletAddview(context):
         context.runImportStepFromProfile(PROFILE_ID, 'portlets')
         logger.info('Applied our portlets.xml to register portlet '
                     'with correct addview.')
+
+
+def uninstall(context):
+    portal = getToolByName(context, 'portal_url').getPortalObject()
+    removeOpenIdPlugin(portal)
+    removeLoginPortlet(portal)

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<portlets>
+  <portlet addview="portlets.OpenIDLogin" remove="true" />
+</portlets>

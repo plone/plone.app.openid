@@ -19,6 +19,15 @@
       post_handler=".setuphandlers.importVarious"
       />
 
+  <genericsetup:registerProfile
+      zcml:condition="installed openid.yadis"
+      name="uninstall"
+      title="OpenID Authentication Support [uninstall]"
+      directory="profiles/uninstall"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
   <genericsetup:upgradeStep
       zcml:condition="installed openid.yadis"
       title="Register portlet with correct addview"

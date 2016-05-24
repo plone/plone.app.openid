@@ -11,6 +11,8 @@ Breaking changes:
 
 New features:
 
+- Added uninstall profile.  [maurits]
+
 - Replaced import step with post_handler.  [maurits]
 
 Bug fixes:
