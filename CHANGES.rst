@@ -5,10 +5,6 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-New:
-
-- *add item here*
-
 Fixes:
 
 - Code quality package cleanup.  [maurits]
