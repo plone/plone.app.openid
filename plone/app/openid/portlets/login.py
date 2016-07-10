@@ -4,7 +4,7 @@ from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter
-from zope.interface import implements
+from zope.interface import implementer
 
 
 class ILoginPortlet(IPortletDataProvider):
@@ -12,8 +12,8 @@ class ILoginPortlet(IPortletDataProvider):
     """
 
 
+@implementer(ILoginPortlet)
 class Assignment(base.Assignment):
-    implements(ILoginPortlet)
 
     title = _(u'OpenID login')
 
