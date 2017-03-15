@@ -15,8 +15,7 @@ New features:
 
 Bug fixes:
 
-- *add item here*
-
+- Removed dependency on unittest2
 
 2.2.1 (2016-08-18)
 ------------------
