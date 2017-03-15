@@ -5,9 +5,18 @@ Changelog
 2.2.2 (unreleased)
 ------------------
 
+Breaking changes:
+
+- *add item here*
+
+New features:
+
+- *add item here*
+
 Bug fixes:
 
-- Removed dependency on unittest2
+- *add item here*
+
 
 2.2.1 (2016-08-18)
 ------------------
