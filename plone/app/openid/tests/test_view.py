@@ -2,7 +2,7 @@
 from plone.app.openid.testing import PLONEAPPOPENID_INTEGRATION_TESTING
 from Products.PluggableAuthService.interfaces import plugins as plugin_ifaces
 
-import unittest2 as unittest
+import unittest
 
 
 class TestOpenIdView(unittest.TestCase):
