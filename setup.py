@@ -32,6 +32,7 @@ setup(
     ),
     install_requires=[
         'setuptools',
+        'six',
         'plone.openid',
         'plone.portlets',
         'plone.app.portlets',

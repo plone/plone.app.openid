@@ -17,6 +17,9 @@ Bug fixes:
 - Use zope.interface decorator.
   [gforcada]
 
+- Imports are Python3 compatible.
+  [b4oshany]
+
 
 2.2.0 (2016-06-07)
 ------------------

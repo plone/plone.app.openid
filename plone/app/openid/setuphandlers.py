@@ -6,7 +6,7 @@ from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletType
 from Products.CMFCore.utils import getToolByName
 from Products.PlonePAS.browser.info import PASInfoView
-from StringIO import StringIO
+from six import StringIO
 from zope.component import getMultiAdapter
 from zope.component import getSiteManager
 from zope.component import queryUtility
