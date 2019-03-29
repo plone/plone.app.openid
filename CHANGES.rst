@@ -2,12 +2,22 @@ Changelog
 =========
 
 
-2.2.2 (unreleased)
+2.2.3 (unreleased)
 ------------------
 
 Bug fixes:
 
-- Removed dependency on unittest2
+- Imports are Python3 compatible.
+  [b4oshany]
+
+
+2.2.2 (2017-03-28)
+------------------
+
+Bug fixes:
+
+- Removed dependency on unittest2 [Yashvi]
+
 
 2.2.1 (2016-08-18)
 ------------------
@@ -16,9 +26,6 @@ Bug fixes:
 
 - Use zope.interface decorator.
   [gforcada]
-
-- Imports are Python3 compatible.
-  [b4oshany]
 
 
 2.2.0 (2016-06-07)
